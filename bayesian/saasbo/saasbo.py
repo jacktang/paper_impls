@@ -175,7 +175,7 @@ def run_saasbo(
                 print("WARNING: Exception was raised, using a random point.")
                 x_next = np.random.rand(len(lb))
             else:
-                raise RuntimeException("ERROR: Maximum number of exceptions raised!")
+                raise RuntimeError("ERROR: Maximum number of exceptions raised!")
 
         # transform to original coordinates
         y_next = f(lb + (ub - lb) * x_next)
